@@ -82,7 +82,7 @@ window.onload = function () {
     game.load.image("platform", "assets/platform_1.png");
 
     //Load spritesheets
-    game1.load.spritesheet("player", "assets/nyancat.gif", 300, 138);
+    game.load.spritesheet("player", "assets/nyancat.gif", 300, 138);
     game.load.spritesheet("coin", "assets/coin.png", 36, 44);
     game.load.spritesheet("badge", "assets/badge.png", 42, 54);
     game.load.spritesheet("poison", "assets/poison.png", 32,32);
