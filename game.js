@@ -1,4 +1,5 @@
 // define variables
+
 var game;
 var player;
 var platforms;
