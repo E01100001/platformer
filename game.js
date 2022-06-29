@@ -16,6 +16,8 @@ var winningScore = 10;
 function addItems() {
   items = game.add.physicsGroup();
   createItem(375, 300, "coin");
+  createItem(400, 299, "star");
+  createItem(200, 300, "poison");
 }
 
 // add platforms to the game
@@ -43,7 +45,15 @@ function createBadge() {
 // when the player collects an item on the screen
 function itemHandler(player, item) {
   item.kill();
-  currentScore = currentScore + 10;
+  if( item.key == "coin"){
+    currentScore = currentScore + 10;
+  }
+  if( item.key == "poison"){
+    currentScore = currentScore - 25;
+  }
+  if( item.key == "star"){
+    currentScore = currentScore + 25;
+  }
   if (currentScore === winningScore) {
     createBadge();
   }
@@ -72,9 +82,11 @@ window.onload = function () {
     game.load.image("platform", "assets/platform_1.png");
 
     //Load spritesheets
-    game.load.spritesheet("player", "assets/nyancat.gif", 300, 138);
+    game1.load.spritesheet("player", "assets/nyancat.gif", 300, 138);
     game.load.spritesheet("coin", "assets/coin.png", 36, 44);
     game.load.spritesheet("badge", "assets/badge.png", 42, 54);
+    game.load.spritesheet("poison", "assets/poison.png", 32,32);
+    game.load.spritesheet("star", "assets/star.png", 32,32);
   }
 
   // initial game set up
