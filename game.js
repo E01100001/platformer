@@ -72,7 +72,7 @@ window.onload = function () {
     game.load.image("platform", "assets/platform_1.png");
 
     //Load spritesheets
-    game.load.spritesheet("player", "assets/chalkers.png", 48, 62);
+    game.load.spritesheet("player", "assets/dragon-animated-gif-12.gif", 48, 62);
     game.load.spritesheet("coin", "assets/coin.png", 36, 44);
     game.load.spritesheet("badge", "assets/badge.png", 42, 54);
   }
@@ -131,7 +131,7 @@ window.onload = function () {
       jumpButton.isDown &&
       (player.body.onFloor() || player.body.touching.down)
     ) {
-      player.body.velocity.y = -400;
+      player.body.velocity.y = -500;
     }
     // when the player winw the game
     if (won) {
