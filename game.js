@@ -24,26 +24,6 @@ function addPlatforms() {
   platforms.create(450, 150, "platform");
   platforms.setAll("body.immovable", true);
 }
-  function addPlatforms() {
-    platforms = game.add.physicsGroup();
-    platforms.create(450, 150, "platform");
-    platforms.setAll("body.immovable", true);
-}
-function addPlatforms() {
-  platforms = game.add.physicsGroup();
-  platforms.create(450, 200, "platform");
-  platforms.setAll("body.immovable", true);
-}
-function addPlatforms() {
-  platforms = game.add.physicsGroup();
-  platforms.create(350, 100, "platform");
-  platforms.setAll("body.immovable", true);
-}
-function addPlatforms() {
-  platforms = game.add.physicsGroup();
-  platforms.create(300, 50, "platform");
-  platforms.setAll("body.immovable", true);
-}
 
 // create a single animated item and add to screen
 function createItem(left, top, image) {
