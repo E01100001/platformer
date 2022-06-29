@@ -24,6 +24,26 @@ function addPlatforms() {
   platforms.create(450, 150, "platform");
   platforms.setAll("body.immovable", true);
 }
+  function addPlatforms() {
+    platforms = game.add.physicsGroup();
+    platforms.create(450, 150, "platform");
+    platforms.setAll("body.immovable", true);
+}
+function addPlatforms() {
+  platforms = game.add.physicsGroup();
+  platforms.create(450, 200, "platform");
+  platforms.setAll("body.immovable", true);
+}
+function addPlatforms() {
+  platforms = game.add.physicsGroup();
+  platforms.create(350, 100, "platform");
+  platforms.setAll("body.immovable", true);
+}
+function addPlatforms() {
+  platforms = game.add.physicsGroup();
+  platforms.create(300, 50, "platform");
+  platforms.setAll("body.immovable", true);
+}
 
 // create a single animated item and add to screen
 function createItem(left, top, image) {
@@ -72,7 +92,7 @@ window.onload = function () {
     game.load.image("platform", "assets/platform_1.png");
 
     //Load spritesheets
-    game.load.spritesheet("player", "assets/dragon-animated-gif-12.gif", 48, 62);
+    game.load.spritesheet("player", "assets/chalkers.png", 48, 62);
     game.load.spritesheet("coin", "assets/coin.png", 36, 44);
     game.load.spritesheet("badge", "assets/badge.png", 42, 54);
   }
