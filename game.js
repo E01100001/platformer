@@ -25,6 +25,9 @@ function addItems() {
 function addPlatforms() {
   platforms = game.add.physicsGroup();
   platforms.create(450, 150, "platform");
+  platforms.create(300, 400, "platform");
+  platforms.create(100, 100, "platform");
+  platforms.create(150, 350, "platform");
   platforms.setAll("body.immovable", true);
 }
 
