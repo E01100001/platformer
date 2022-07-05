@@ -83,7 +83,7 @@ window.onload = function () {
     game.load.image("platform", "assets/platform_1.png");
 
     //Load spritesheets
-    game.load.spritesheet("player", "assets/naruto sprite.png", 51.666666666666666666666666666667, 55);
+    game.load.spritesheet("player", "assets/naruto sprite red cloud.png", 46.375, 53);
     game.load.spritesheet("coin", "assets/coin.png", 36, 44);
     game.load.spritesheet("badge", "assets/badge.png", 42, 54);
     game.load.spritesheet("poison", "assets/poison.png", 32,32);
