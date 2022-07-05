@@ -83,7 +83,7 @@ window.onload = function () {
     game.load.image("platform", "assets/platform_1.png");
 
     //Load spritesheets
-    game.load.spritesheet("player", "assets/naruto sprite.png", 51.666666666666666666666666666667, 55);
+    game.load.spritesheet("player", "assets/water dragon.png", 106, 71);
     game.load.spritesheet("coin", "assets/coin.png", 36, 44);
     game.load.spritesheet("badge", "assets/badge.png", 42, 54);
     game.load.spritesheet("poison", "assets/poison.png", 32,32);
@@ -94,10 +94,10 @@ window.onload = function () {
   function create() {
     player = game.add.sprite(50, 600, "player");
     player.animations.add("walk");
-    player.anchor.setTo(0.5, 1);
+    player.anchor.setTo(0, 1);
     game.physics.arcade.enable(player);
     player.body.collideWorldBounds = true;
-    player.body.gravity.y = 500;
+    player.body.gravity.y = 300;
 
     addItems();
     addPlatforms();
@@ -125,13 +125,13 @@ window.onload = function () {
 
     // is the left cursor key presssed?
     if (cursors.left.isDown) {
-      player.animations.play("walk", 10, true);
+      player.animations.play("walk", 5, true);
       player.body.velocity.x = -300;
       player.scale.x = -1;
     }
     // is the right cursor key pressed?
     else if (cursors.right.isDown) {
-      player.animations.play("walk", 10, true);
+      player.animations.play("walk", 5, true);
       player.body.velocity.x = 300;
       player.scale.x = 1;
     }
