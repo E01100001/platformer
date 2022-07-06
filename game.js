@@ -11,13 +11,31 @@ var text;
 var winningMessage;
 var won = false;
 var currentScore = 0;
-var winningScore = 10;
+var winningScore = 230;
 
 // add collectable items to the game
 function addItems() {
   items = game.add.physicsGroup();
   createItem(375, 300, "coin");
-  createItem(400, 299, "star");
+  createItem(375, 400, "coin");
+  createItem(375, 500, "coin");
+  createItem(375, 200, "coin");
+  createItem(375, 100, "coin");
+  createItem(450, 300, "coin");
+  createItem(450, 400, "coin");
+  createItem(450, 500, "coin");
+  createItem(450, 200, "coin");
+  createItem(450, 100, "coin");
+  createItem(200, 300, "coin");
+  createItem(200, 400, "coin");
+  createItem(200, 500, "coin");
+
+  createItem(550, 100, "star");
+  createItem(300, 50, "star");
+
+  createItem(200, 300, "poison");
+  createItem(200, 300, "poison");
+  createItem(200, 300, "poison");
   createItem(200, 300, "poison");
 }
 
@@ -28,6 +46,8 @@ function addPlatforms() {
   platforms.create(300, 400, "platform");
   platforms.create(100, 100, "platform");
   platforms.create(150, 350, "platform");
+  platforms.create(450, 450, "platform");
+  platforms.create(500, 300, "platform");
   platforms.setAll("body.immovable", true);
 }
 
@@ -56,7 +76,7 @@ function itemHandler(player, item) {
     currentScore = currentScore - 25;
   }
   if( item.key == "star"){
-    currentScore = currentScore + 25;
+    currentScore = currentScore + 100;
   }
   if (currentScore === winningScore) {
     createBadge();
@@ -86,7 +106,7 @@ window.onload = function () {
     game.load.image("platform", "assets/platform_1.png");
 
     //Load spritesheets
-    game.load.spritesheet("player", "assets/water dragon.png", 106, 71);
+    game.load.spritesheet("player", "assets/miku hatsune sprite.png", 75, 64);
     game.load.spritesheet("coin", "assets/coin.png", 36, 44);
     game.load.spritesheet("badge", "assets/badge.png", 42, 54);
     game.load.spritesheet("poison", "assets/poison.png", 32,32);
@@ -100,7 +120,7 @@ window.onload = function () {
     player.anchor.setTo(0, 1);
     game.physics.arcade.enable(player);
     player.body.collideWorldBounds = true;
-    player.body.gravity.y = 300;
+    player.body.gravity.y = 800;
 
     addItems();
     addPlatforms();
@@ -128,14 +148,14 @@ window.onload = function () {
 
     // is the left cursor key presssed?
     if (cursors.left.isDown) {
-      player.animations.play("walk", 5, true);
-      player.body.velocity.x = -300;
+      player.animations.play("walk", 10, true);
+      player.body.velocity.x = -200;
       player.scale.x = -1;
     }
     // is the right cursor key pressed?
     else if (cursors.right.isDown) {
-      player.animations.play("walk", 5, true);
-      player.body.velocity.x = 300;
+      player.animations.play("walk", 10, true);
+      player.body.velocity.x = 200;
       player.scale.x = 1;
     }
     // player doesn't move
@@ -157,3 +177,5 @@ window.onload = function () {
 
   function render() {}
 };
+
+alert("Hit score 230 to win! Don't collect the poison.")
