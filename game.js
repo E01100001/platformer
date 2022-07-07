@@ -78,9 +78,6 @@ function itemHandler(player, item) {
   if( item.key == "star"){
     currentScore = currentScore + 100;
   }
-  if (currentScore === winningScore) {
-    createBadge();
-  }
 }
 
 // when the player collects the badge at the end of the game
@@ -170,7 +167,7 @@ window.onload = function () {
       player.body.velocity.y = -500;
     }
     // when the player winw the game
-    if (won) {
+    if (currentScore > 230) {
       winningMessage.text = "YOU WIN!!!";
     }
   }
